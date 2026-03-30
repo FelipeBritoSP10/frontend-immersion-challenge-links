@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRITO.CINEMA | Premium Experience</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="dark-mode">
+    <header id="main-header">
+        <div class="logo">
+            <span class="logo-main">BRITO</span><span class="logo-dot">.</span><span class="logo-sub">CINEMA</span>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">🌓</button>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <h1 class="main-title">Quem está assistindo?</h1>
+            <div class="profiles-wrapper">
+                <ul class="profiles-list">
+                    <li class="profile-item">
+                        <div class="avatar-box"><img src="./imgs/profile1.jpg" alt="Gustavo"></div>
+                        <span class="profile-name">Gustavo</span>
+                    </li>
+                    <li class="profile-item">
+                        <div class="avatar-box"><img src="./imgs/profile2.jpg" alt="Thiago"></div>
+                        <span class="profile-name">Thiago</span>
+                    </li>
+                    <li class="profile-item">
+                        <div class="avatar-box"><img src="./imgs/profile3.jpg" alt="Thamiris"></div>
+                        <span class="profile-name">Thamiris</span>
+                    </li>
+                    <li class="profile-item">
+                        <div class="avatar-box"><img src="./imgs/profile4.jpg" alt="Vini"></div>
+                        <span class="profile-name">Vini</span>
+                    </li>
+                    <li class="profile-item">
+                        <a href="#" class="profile-link add-btn">
+                            <div class="avatar-box plus-icon"><span>+</span></div>
+                            <span class="profile-name">Novo Perfil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="manage-area">
+                <button class="btn-manage">Gerenciar Perfis</button>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="trending-section">
+            <h2 class="section-title">Populares no Cinema</h2>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <span class="genre-icon">💥</span>
+                    <span class="genre-label">Ação</span>
+                </div>
+                <div class="trending-card">
+                    <span class="genre-icon">🚀</span>
+                    <span class="genre-label">Sci-Fi</span>
+                </div>
+                <div class="trending-card">
+                    <span class="genre-icon">🎭</span>
+                    <span class="genre-label">Drama</span>
+                </div>
+                <div class="trending-card">
+                    <span class="genre-icon">👻</span>
+                    <span class="genre-label">Terror</span>
+                </div>
+            </div>
+        </section>
+
+      <hr class="section-divider">
+
+<section class="plans-section">
+    <h2 class="section-title">Escolha seu Plano</h2>
+    <div class="plans-grid">
+        <div class="plan-card">
+            <div class="plan-header">
+                <h3>Básico</h3>
+                <p class="price"><span>R$</span> 19,90<small>/mês</small></p>
+            </div>
+            <ul class="plan-features">
+                <li>720p (HD)</li>
+                <li>1 Tela por vez</li>
+                <li>Assista no celular e tablet</li>
+            </ul>
+            <button class="btn-plan">Assinar Agora</button>
+        </div>
+
+        <div class="plan-card featured">
+            <div class="badge">Mais Popular</div>
+            <div class="plan-header">
+                <h3>Premium</h3>
+                <p class="price"><span>R$</span> 45,90<small>/mês</small></p>
+            </div>
+            <ul class="plan-features">
+                <li>4K + HDR</li>
+                <li>4 Telas simultâneas</li>
+                <li>Áudio Spatial (Dolby Atmos)</li>
+                <li>Downloads ilimitados</li>
+            </ul>
+            <button class="btn-plan btn-featured">Experimentar Premium</button>
+        </div>
+    </div>
+</section>
+
+        <hr class="section-divider">
+
+        <section class="faq-section">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Como cancelar minha assinatura? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Você pode cancelar online com apenas dois cliques. Sem taxas de cancelamento.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Onde posso assistir? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Assista em qualquer lugar, a qualquer momento, em um número ilimitado de dispositivos.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-main">BRITO</span><span class="logo-dot">.</span><span class="logo-sub">CINEMA</span>
+                </div>
+                <p>A melhor experiência cinematográfica na palma da sua mão. Assista onde quiser, quando quiser.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="#">Séries</a><a href="#">Filmes</a><a href="#">Originais</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Suporte</h4>
+                    <a href="#">Ajuda</a><a href="#">Conta</a><a href="#">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Termos</a><a href="#">Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BRITO.CINEMA - Todos os direitos reservados</p>
+            <span>Brasil</span>
+        </div>
+    </footer>
+
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/accordions.js"></script>
+</body>
+</html>
