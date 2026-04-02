@@ -1,114 +1,160 @@
+/* --- ESTILIZAÇÃO PROFILES BRITO.CINEMA --- */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.profiles-wrapper {
+    width: 100%;
+    max-width: 1000px;
+}
+
 .profiles-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: clamp(1.5rem, 3vw, 3rem);
 }
 
+/* Animação de Entrada (fadeInUp) */
 .profile-item {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-.profile-item:nth-child(1) {
-    animation-delay: 0.1s;
+/* Delays para efeito cascata */
+.profile-item:nth-child(1) { animation-delay: 0.1s; }
+.profile-item:nth-child(2) { animation-delay: 0.2s; }
+.profile-item:nth-child(3) { animation-delay: 0.3s; }
+.profile-item:nth-child(4) { animation-delay: 0.4s; }
+.profile-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Botões e Links de Perfil */
+.profile-btn, .profile-link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    group: hover;
 }
 
-.profile-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.profile-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.profile-item:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.profile-item:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
+/* Caixa da Imagem */
 .avatar-box {
-    width: clamp(120px, 15vw, 180px);
-    height: clamp(120px, 15vw, 180px);
+    width: clamp(100px, 14vw, 160px);
+    height: clamp(100px, 14vw, 160px);
     border-radius: var(--border-radius);
-    position: relative;
     overflow: hidden;
-    background-color: #1a1a1a;
     border: 3px solid transparent;
     transition: var(--transition);
+    background-color: #1a1a1a;
+    position: relative;
 }
 
 .avatar-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    transition: transform 0.4s ease;
 }
 
+/* Efeito Hover no Avatar */
 .profile-item:hover .avatar-box {
-    transform: scale(1.08) translateY(-10px);
     border-color: var(--text-main);
+    transform: scale(1.05);
 }
 
+.profile-item:active .avatar-box {
+    transform: scale(0.95);
+}
+
+/* Nome do Perfil */
 .profile-name {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
+    margin-top: 15px;
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     transition: var(--transition);
 }
 
 .profile-item:hover .profile-name {
     color: var(--text-main);
-    transform: translateY(5px);
 }
 
+/* Estilo Especial: Botão Novo Perfil */
 .plus-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     border: 2px dashed var(--text-muted);
 }
 
 .plus-icon span {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 200;
     color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.profile-item:hover .plus-icon {
+    background-color: var(--text-main);
+    border-style: solid;
+}
+
+.profile-item:hover .plus-icon span {
+    color: var(--bg-dark);
+    transform: rotate(90deg);
+}
+
+/* Área do Botão de Gerenciar */
+.manage-area {
+    margin-top: 5rem;
 }
 
 .btn-manage {
-    margin-top: 4rem;
     background: transparent;
     border: 1px solid var(--text-muted);
     color: var(--text-muted);
-    padding: 1rem 2.5rem;
-    font-weight: 600;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .btn-manage:hover {
-    color: var(--bg-dark);
-    background-color: var(--text-main);
+    color: var(--text-main);
     border-color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
 }
 
+/* Keyframes */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .profiles-list {
+        gap: 1.5rem;
+    }
+    .profile-container {
+        min-height: auto;
+        padding-top: 100px;
     }
 }

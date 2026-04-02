@@ -1,48 +1,87 @@
+/* --- FAQ ALINHADO (MESMO TAMANHO) --- */
+.faq-section {
+    padding: 4rem 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .faq-container {
     width: 100%;
     max-width: 850px;
+    display: grid;
+    gap: 12px;
 }
 
 .faq-item {
     background: var(--card-bg);
-    margin-bottom: 1rem;
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, .05);
+    border-radius: 12px;
     overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover,
+.faq-item.active {
+    background: rgba(255, 255, 255, .06);
+    border-color: var(--primary);
 }
 
 .faq-question {
-    padding: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
-    font-size: 1.1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+    font: 600 1.2rem 'Inter', sans-serif;
+}
+
+.faq-icon {
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    transition: .4s;
 }
 
 .faq-answer {
     max-height: 0;
-    padding: 0 1.5rem;
-    overflow: hidden;
-    color: var(--text-muted);
-    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
     opacity: 0;
+    padding: 0 2rem;
+    color: var(--text-muted);
     line-height: 1.6;
+    transition: .5s ease;
+}
+
+/* --- STATES --- */
+.faq-question:hover,
+.faq-item.active .faq-icon {
+    color: var(--primary);
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px;
-    padding-top: 0.5rem;
-    padding-bottom: 1.5rem;
+    max-height: 500px;
     opacity: 1;
-}
-
-.faq-icon {
-    transition: transform 0.3s;
+    padding-bottom: 2rem;
 }
 
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
-    color: var(--primary);
+}
+
+@media (max-width: 600px) {
+    .faq-question {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+
+    .faq-answer {
+        padding: 0 1.2rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding-bottom: 1.5rem;
+    }
 }
