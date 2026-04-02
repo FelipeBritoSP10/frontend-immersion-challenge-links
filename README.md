@@ -23,12 +23,26 @@ A organização do projeto segue as boas práticas de separação de responsabil
 
 ```text
 /
+├── components/         # Fragmentos HTML (header, plans, faq, footer)
 ├── imgs/               # Ativos visuais (Avatares, Logos e Banners)
 ├── scripts/            # Lógica em JS (Controle de Tema e FAQ)
 ├── styles/             # Arquivos CSS (Variáveis Root e Estilização)
-├── index.html          # Estrutura principal do site
+├── index.html          # Estrutura principal do saite
 └── README.md           # Documentação do projeto
 ```
+
+## 📂 Organização Modular (/components)
+A principal evolução desta etapa foi a transição de um documento monolítico para uma Arquitetura Baseada em Componentes. Isso permite que cada seção do site seja independente, facilitando a manutenção e a escalabilidade do código.
+
+- header.html: Navegação e controle de tema (Dark/Light).
+
+- plans.html: Grid de planos com efeitos de alta fidelidade.
+
+- faq.html: Sistema de acordeão otimizado.
+
+- footer.html: Rodapé institucional e links sociais.
+
+Os componentes são injetados dinamicamente no index.html via Fetch API e processamento assíncrono (Promise.all), garantindo que o DOM seja construído de forma eficiente e organizada.
 
 
 ## 🚀 Tecnologias Utilizadas
