@@ -1,0 +1,48 @@
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.trending-card {
+    height: 150px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.genre-icon {
+    font-size: 2.8rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.genre-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.trending-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+    background: #1a1a1a;
+}
+
+.trending-card:hover .genre-icon {
+    transform: scale(1.3) rotate(-5deg);
+}
+
+.trending-card:hover .genre-label {
+    color: var(--text-main);
+    text-shadow: 0 0 10px var(--primary);
+}

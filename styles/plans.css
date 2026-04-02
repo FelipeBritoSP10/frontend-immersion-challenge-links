@@ -1,0 +1,140 @@
+/* --- UPGRADE NA SEÇÃO DE PLANOS --- */
+.plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    width: 320px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Efeito ao passar o mouse */
+.plan-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Destaque do Plano Premium */
+.plan-card.featured {
+    border: 2px solid var(--primary);
+    background: linear-gradient(145deg, rgba(229, 9, 20, 0.1), rgba(0, 0, 0, 0.4));
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.plan-card.featured:hover {
+    transform: scale(1.1) translateY(-15px);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.3);
+}
+
+/* Selo de "Mais Popular" */
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.4);
+}
+
+.plan-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* Estilo do Preço */
+.price {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--text-main);
+    margin: 1.5rem 0;
+}
+
+.price span {
+    font-size: 1.2rem;
+    vertical-align: super;
+    color: var(--text-muted);
+    margin-right: 4px;
+}
+
+.price small {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Lista de Benefícios */
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin: 1.5rem 0 2.5rem;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features li::before {
+    content: "✓";
+    color: var(--primary);
+    margin-right: 12px;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+/* Botões de Assinatura */
+.btn-plan {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-plan:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.btn-featured {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-featured:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
