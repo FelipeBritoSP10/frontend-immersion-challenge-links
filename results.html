@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmes encontrados | BRITO.CINEMA</title>
-
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/results.css">
 </head>
 
 <body>
-    <section class="results-section">
-        <h1 class="section-title" id="results-title"></h1>
 
-        <div id="grid-cards" class="grid-cards"></div>
-    </section>
+    <header id="main-header">
+        <div class="logo">
+            <a href="/index.html">
+                BRITO<span class="logo-sub">.CINEMA</span>
+            </a>
+        </div>
+    </header>
+
+  <section class="results-section">
+    <h1 class="section-title" id="results-title"></h1>
+    <div id="grid-cards" class="grid-cards"></div>
+</section>
+
     <script src="/scripts/services/api.js"></script>
     <script src="/scripts/search.js"></script>
+
 </body>
 
 </html>

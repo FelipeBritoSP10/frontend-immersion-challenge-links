@@ -85,6 +85,11 @@ header {
     text-transform: uppercase;
 }
 
+.logo a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo-sub {
     font-weight: 300;
     background: linear-gradient(135deg, var(--primary), #ff6b6b);
