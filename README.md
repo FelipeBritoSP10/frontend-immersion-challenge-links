@@ -14,6 +14,7 @@ Uma interface de streaming premium, moderna e responsiva, desenvolvida durante a
 - **FAQ Interativo:** Sistema de perguntas frequentes (acordeão) com transições suaves via JavaScript.
 - **Dark/Light Mode:** Alternância de temas para conforto visual e acessibilidade.
 - **Footer de Alto Nível:** Rodapé profissional com colunas organizadas e redes sociais que ativam as cores oficiais da marca no hover.
+- **Busca de Filmes com API:** Sistema de busca integrado utilizando a API do The Movie Database (TMDB), permitindo pesquisar filmes diretamente na barra de pesquisa e receber resultados dinâmicos em tempo real, incluindo título, imagem e informações do filme.
 
 ---
 
